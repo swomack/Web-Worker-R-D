@@ -160,6 +160,11 @@ function init() {
     mesh = new THREE.Mesh( geometry, material );
     scene.add( mesh );
 
+    var geometry = new THREE.PlaneBufferGeometry( 1000, 1000, 32 );
+    var material = new THREE.MeshBasicMaterial( {color: 0xffff00, side: THREE.DoubleSide} );
+    var plane = new THREE.Mesh( geometry, material );
+    scene.add( plane );
+
     //
 
     raycaster = new THREE.Raycaster();

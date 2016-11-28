@@ -8,8 +8,12 @@ self.addEventListener("message", function (event) {
 
     var message = new Float32Array(event.data.message);
 
-    for(let i = 0; i < message.length; i++)
-        message[i] += 10;
+    for(let i = 0; i < message.length; i++) {
+
+        if(i%3 == 0)
+            message[i] += 10;
+    }
+
 
     self.postMessage({ case: 1, array_buffer: message });
 
