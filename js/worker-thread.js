@@ -6,7 +6,7 @@
 
 self.addEventListener("message", function (event) {
 
-    var message = event.data.messages;
+    var message = new Float32Array(event.data.message);
 
     for(let i = 0; i < message.length; i++)
         message[i] += 10;

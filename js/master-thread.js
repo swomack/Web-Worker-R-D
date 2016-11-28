@@ -41,7 +41,11 @@ for(let i = 0; i < 10; i++)
     array_buffer[i] = i;
 
 var worker_thread = createWorkerThread();
-worker_thread.postMessage({ messages: array_buffer });
+
+var obj_data= {
+    message: array_buffer
+};
+worker_thread.postMessage(obj_data, [obj_data.message.buffer]);
 
 
 function animate() {
