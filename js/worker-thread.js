@@ -11,6 +11,6 @@ self.addEventListener("message", function (event) {
     for(let i = 0; i < message.length; i++)
         message[i] += 10;
 
-    self.postMessage({ case: 1, array_data: message });
+    self.postMessage({ case: 1, array_buffer: message });
 
 }, false);
